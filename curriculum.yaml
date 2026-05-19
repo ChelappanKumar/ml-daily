@@ -156,7 +156,7 @@ notes:
     goal: Walk through attention, FFN, residual + norm. Implement a tiny block in numpy.
   - slug: concept-prompt-engineering-techniques
     title: Concept — prompt engineering techniques
-    goal: Catalog: few-shot, CoT, self-consistency, ReAct, reflexion. When each helps.
+    goal: "Catalog: few-shot, CoT, self-consistency, ReAct, reflexion. When each helps."
   - slug: concept-evaluation-metrics-classification
     title: Concept — classification metrics deep dive
     goal: Precision, recall, F1, ROC-AUC, PR-AUC — when each is misleading.
