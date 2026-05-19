@@ -1,0 +1,165 @@
+# ml-daily curriculum
+# Edit freely. The picker rotates pipelines -> agents -> notes -> pipelines ...
+# Each task: slug (folder-safe), title, goal, references (optional).
+
+pipelines:
+  - slug: sklearn-pipeline-columntransformer
+    title: Sklearn Pipeline with ColumnTransformer
+    goal: Build an end-to-end Pipeline handling numeric + categorical features, fit on a toy dataset, evaluate with cross_val_score.
+    refs:
+      - https://scikit-learn.org/stable/modules/compose.html
+  - slug: mlflow-experiment-tracking
+    title: MLflow experiment tracking
+    goal: Track 3 model variants with MLflow (params, metrics, artifacts). Compare runs in the UI.
+    refs:
+      - https://mlflow.org/docs/latest/tracking.html
+  - slug: train-eval-inference-split
+    title: Separate train / eval / inference scripts
+    goal: Refactor a notebook into train.py, evaluate.py, predict.py with a shared config.yaml.
+  - slug: feature-engineering-pipeline
+    title: Feature engineering pipeline
+    goal: Implement custom sklearn Transformers for cleaning, encoding, and scaling. Chain them in a Pipeline.
+  - slug: cross-validation-strategies
+    title: Cross-validation strategies
+    goal: Compare KFold, StratifiedKFold, GroupKFold, TimeSeriesSplit on the same dataset and explain when to use each.
+  - slug: hyperparameter-tuning-optuna
+    title: Hyperparameter tuning with Optuna
+    goal: Tune an XGBoost classifier with Optuna; log trials to MLflow.
+    refs:
+      - https://optuna.org/
+  - slug: model-registry-versioning
+    title: Model registry and versioning
+    goal: Register a model in MLflow Model Registry, promote staging -> production, load by version.
+  - slug: data-validation-greatexpectations
+    title: Data validation with Great Expectations
+    goal: Define expectations for an input dataset, fail the pipeline when violated.
+    refs:
+      - https://docs.greatexpectations.io/
+  - slug: drift-detection-evidently
+    title: Drift detection with Evidently
+    goal: Generate a data drift report comparing training vs production-like data.
+    refs:
+      - https://docs.evidentlyai.com/
+  - slug: batch-inference-pipeline
+    title: Batch inference pipeline
+    goal: Read input from parquet, run inference, write predictions back to parquet with a run_id column.
+  - slug: streaming-inference-fastapi
+    title: Streaming inference with FastAPI
+    goal: Wrap a model in FastAPI with /predict and /healthz endpoints; load the model once at startup.
+  - slug: dockerize-inference-service
+    title: Dockerize an inference service
+    goal: Multi-stage Dockerfile, slim base image, non-root user, healthcheck. Build + run locally.
+  - slug: ci-for-ml-github-actions
+    title: CI for ML with GitHub Actions
+    goal: Workflow that runs unit tests + a quick model sanity-check on PR.
+  - slug: dvc-data-versioning
+    title: DVC for data versioning
+    goal: Track a dataset with DVC, commit pointers in git, reproduce a pipeline stage.
+    refs:
+      - https://dvc.org/doc
+  - slug: imbalanced-classification
+    title: Handling imbalanced classification
+    goal: Compare class_weight, SMOTE, and threshold tuning on an imbalanced dataset. Report PR-AUC.
+  - slug: explainability-shap
+    title: Model explainability with SHAP
+    goal: Compute SHAP values for a tree model, plot summary + force plots, interpret findings.
+  - slug: feature-store-feast
+    title: Feature store basics with Feast
+    goal: Define an offline + online feature view, materialize, retrieve features for inference.
+    refs:
+      - https://docs.feast.dev/
+
+agents:
+  - slug: react-loop-from-scratch
+    title: ReAct agent loop from scratch
+    goal: Implement a minimal ReAct loop (Thought / Action / Observation) calling an LLM. One tool only.
+  - slug: tool-calling-ai-sdk
+    title: Tool calling with the Vercel AI SDK
+    goal: Define 2 tools, let the model choose between them, print the trace.
+    refs:
+      - https://sdk.vercel.ai/docs/ai-sdk-core/tools-and-tool-calling
+  - slug: rag-basic-embeddings
+    title: Basic RAG with embeddings
+    goal: Chunk a small corpus, embed with a sentence-transformer, FAISS index, retrieve top-k, generate answer.
+  - slug: rag-with-reranking
+    title: RAG with reranking
+    goal: Add a cross-encoder reranker on top of a dense retriever. Measure hit@k before / after.
+  - slug: multi-step-planner-agent
+    title: Multi-step planner agent
+    goal: Agent that plans subtasks first, then executes each. Compare quality vs single-shot.
+  - slug: langgraph-state-machine
+    title: LangGraph state machine agent
+    goal: Build a graph with branching (retry on tool failure, escalate on uncertainty).
+    refs:
+      - https://langchain-ai.github.io/langgraph/
+  - slug: agent-evaluation-traces
+    title: Agent evaluation with traces
+    goal: Capture tool calls + outputs, score success/failure on 10 scripted tasks, compute pass rate.
+  - slug: memory-and-retrieval
+    title: Agent memory and retrieval
+    goal: Add short-term (last N turns) + long-term (vector store) memory. Test recall across sessions.
+  - slug: mcp-server-build
+    title: Build a minimal MCP server
+    goal: Expose 2 tools over MCP, connect from a client, exercise tool discovery + invocation.
+    refs:
+      - https://modelcontextprotocol.io/
+  - slug: structured-output-vs-tools
+    title: Structured output vs tool calling
+    goal: Same task with (a) Pydantic structured output and (b) tool calling. Compare reliability + cost.
+  - slug: agent-guardrails
+    title: Agent guardrails
+    goal: Add input validation, output validation, tool-arg sanity checks. Test with adversarial prompts.
+  - slug: function-calling-openai-anthropic
+    title: Function calling across providers
+    goal: Same agent, two providers (Anthropic + OpenAI via AI SDK or AI Gateway). Compare behavior.
+  - slug: code-execution-agent-sandboxed
+    title: Code-execution agent (sandboxed)
+    goal: Agent that writes + runs Python in a sandbox (Vercel Sandbox or local docker). Iterate on errors.
+    refs:
+      - https://vercel.com/docs/vercel-sandbox
+  - slug: parallel-tool-calls
+    title: Parallel tool calls
+    goal: Demonstrate the model calling multiple tools concurrently. Measure latency vs sequential.
+  - slug: agent-with-human-in-loop
+    title: Human-in-the-loop agent
+    goal: Pause for approval before destructive tool calls. Resume on approval.
+  - slug: rag-evaluation-ragas
+    title: RAG evaluation with Ragas
+    goal: Compute faithfulness, answer relevancy, context precision/recall on a small Q/A set.
+    refs:
+      - https://docs.ragas.io/
+
+notes:
+  - slug: paper-attention-is-all-you-need
+    title: Paper notes — Attention Is All You Need
+    goal: 1-page summary covering motivation, architecture, key results, limitations.
+  - slug: paper-bert
+    title: Paper notes — BERT
+    goal: Summarize MLM + NSP pretraining, downstream finetuning, ablations.
+  - slug: paper-react-agents
+    title: Paper notes — ReAct
+    goal: Summarize the interleaving of reasoning + acting; strengths vs CoT.
+  - slug: paper-rag-original
+    title: Paper notes — Retrieval-Augmented Generation
+    goal: Summarize the original RAG paper, contrast with modern dense retrieval.
+  - slug: concept-bias-variance
+    title: Concept — bias / variance tradeoff
+    goal: Explain with one worked example (polynomial regression degree sweep).
+  - slug: concept-regularization
+    title: Concept — L1 vs L2 regularization
+    goal: When each is preferred, geometric intuition, code demo.
+  - slug: concept-gradient-descent-variants
+    title: Concept — SGD vs Adam vs AdamW
+    goal: Update rules, when each shines, common failure modes.
+  - slug: concept-transformer-internals
+    title: Concept — Transformer block internals
+    goal: Walk through attention, FFN, residual + norm. Implement a tiny block in numpy.
+  - slug: concept-prompt-engineering-techniques
+    title: Concept — prompt engineering techniques
+    goal: Catalog: few-shot, CoT, self-consistency, ReAct, reflexion. When each helps.
+  - slug: concept-evaluation-metrics-classification
+    title: Concept — classification metrics deep dive
+    goal: Precision, recall, F1, ROC-AUC, PR-AUC — when each is misleading.
+  - slug: concept-llm-eval-frameworks
+    title: Concept — LLM eval frameworks
+    goal: Compare Ragas, DeepEval, OpenAI evals. When to use which.
