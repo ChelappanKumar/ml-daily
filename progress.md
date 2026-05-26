@@ -6,3 +6,4 @@ Auto-appended by `scripts/daily.sh` after each successful scaffold.
 |------|----------|-------|--------|
 | 2026-05-20 | agents | RAG evaluation with Ragas | agents/2026-05-20-rag-evaluation-ragas |
 | 2026-05-24 | notes | Concept — Transformer block internals | notes/2026-05-24-concept-transformer-internals |
+| 2026-05-26 | agents | Build a minimal MCP server | agents/2026-05-26-mcp-server-build |
