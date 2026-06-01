@@ -10,3 +10,4 @@ Auto-appended by `scripts/daily.sh` after each successful scaffold.
 | 2026-05-27 | notes | Paper notes — BERT | notes/2026-05-27-paper-bert |
 | 2026-05-28 | pipelines | Data validation with Great Expectations | pipelines/2026-05-28-data-validation-greatexpectations |
 | 2026-05-30 | notes | Concept — LLM eval frameworks | notes/2026-05-30-concept-llm-eval-frameworks |
+| 2026-06-01 | agents | Code-execution agent (sandboxed) | agents/2026-06-01-code-execution-agent-sandboxed |
