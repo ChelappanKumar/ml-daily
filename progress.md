@@ -13,3 +13,4 @@ Auto-appended by `scripts/daily.sh` after each successful scaffold.
 | 2026-06-01 | agents | Code-execution agent (sandboxed) | agents/2026-06-01-code-execution-agent-sandboxed |
 | 2026-06-02 | notes | Concept — bias / variance tradeoff | notes/2026-06-02-concept-bias-variance |
 | 2026-06-04 | agents | Agent evaluation with traces | agents/2026-06-04-agent-evaluation-traces |
+| 2026-06-06 | pipelines | CI for ML with GitHub Actions | pipelines/2026-06-06-ci-for-ml-github-actions |
