@@ -15,3 +15,4 @@ Auto-appended by `scripts/daily.sh` after each successful scaffold.
 | 2026-06-04 | agents | Agent evaluation with traces | agents/2026-06-04-agent-evaluation-traces |
 | 2026-06-06 | pipelines | CI for ML with GitHub Actions | pipelines/2026-06-06-ci-for-ml-github-actions |
 | 2026-06-07 | agents | Multi-step planner agent | agents/2026-06-07-multi-step-planner-agent |
+| 2026-06-08 | notes | Concept — SGD vs Adam vs AdamW | notes/2026-06-08-concept-gradient-descent-variants |
