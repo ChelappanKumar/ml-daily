@@ -18,3 +18,4 @@ Auto-appended by `scripts/daily.sh` after each successful scaffold.
 | 2026-06-08 | notes | Concept — SGD vs Adam vs AdamW | notes/2026-06-08-concept-gradient-descent-variants |
 | 2026-06-10 | agents | Agent memory and retrieval | agents/2026-06-10-memory-and-retrieval |
 | 2026-06-15 | pipelines | DVC for data versioning | pipelines/2026-06-15-dvc-data-versioning |
+| 2026-06-20 | notes | Paper notes — ReAct | notes/2026-06-20-paper-react-agents |
